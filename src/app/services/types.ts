@@ -15,3 +15,10 @@ export interface User {
   website: string
   company: any
 }
+
+export interface Post {
+  userId: number
+  id: number
+  title: string
+  body: string
+}

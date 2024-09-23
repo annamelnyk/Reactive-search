@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core';
-import { User } from './types'
+import { Post, User } from './types'
 import { Observable } from 'rxjs'
 
 
@@ -14,5 +14,9 @@ export class BackendService {
 
   getUsersList(): Observable<User[]> {
     return this.http.get<User[]>(`${API_URL}/users`)
+  }
+
+  getPostsList(): Observable<Post[]> {
+    return this.http.get<Post[]>(`${API_URL}/posts`)
   }
 }
