@@ -1,1 +1,7 @@
-<p>users-list works!</p>
+<ul class="user-list">
+  @if (isLoading) {
+  <li class="list-item"><p class="loader">Loading...</p></li>
+  } @else { @for (user of users$ | async; track user?.id) {
+  <li class="list-item" (click)="goToUserPosts(user.id)">{{ user.name }}</li>
+  } }
+</ul>

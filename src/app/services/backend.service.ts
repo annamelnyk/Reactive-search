@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core';
+import { User } from './types'
+import { Observable } from 'rxjs'
 
 
 const API_URL: string = 'https://jsonplaceholder.typicode.com';
@@ -7,5 +10,9 @@ const API_URL: string = 'https://jsonplaceholder.typicode.com';
 })
 export class BackendService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  getUsersList(): Observable<User[]> {
+    return this.http.get<User[]>(`${API_URL}/users`)
+  }
 }

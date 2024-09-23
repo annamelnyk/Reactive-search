@@ -1,0 +1,10 @@
+.user-list {
+  list-style-type: none;
+  padding-left: unset;
+}
+
+.list-item {
+  border: 1px solid var(--c-border);
+  padding: 5px 10px;
+  cursor: pointer;
+}
