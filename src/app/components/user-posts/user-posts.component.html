@@ -1,15 +1,18 @@
 <table class="table">
   <caption class="caption">
-    User's posts
+    Users posts
   </caption>
   <tr class="row">
     <th>Title</th>
     <th>Body</th>
-    <th>Category</th>
+    <th>User</th>
   </tr>
+  @for (post of posts$ | async ; track post.id) {
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>{{ post.title }}</td>
+    <td>{{ post.body }}</td>
+    <td>{{ post.userId }}</td>
   </tr>
+  }
 </table>
+

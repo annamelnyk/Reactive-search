@@ -2,7 +2,16 @@
   width: 100%;
 }
 
-table, td, th {
+caption {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+table,
+td,
+th {
   border: 1px solid var(--c-border);
   border-collapse: collapse;
+  padding: 5px 10px;
 }
